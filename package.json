@@ -1,0 +1,19 @@
+{
+  "name": "ts-basic",
+  "version": "0.0.1",
+  "description": "typescript basic lecture",
+  "main": "index.js",
+  "authors": {
+    "name": "strikers1999",
+    "email": "strikers1999@naver.com"
+  },
+  "repository": "/ts-basic",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
