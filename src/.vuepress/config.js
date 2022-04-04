@@ -50,7 +50,12 @@ module.exports = {
         {
           title: "타입스크립트",
           collapsable: false,
-          children: ["", "using-vue", "test"],
+          children: ["", "why-typescript"],
+        },
+        {
+          title: "기본타입",
+          collapsable: false,
+          children: ["type-kind", "type-interface"],
         },
       ],
     },
