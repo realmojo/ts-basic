@@ -55,8 +55,8 @@ const arr: [number, string, boolean] = [33, "Ted", true];
 
 ## enum
 
-- 숫자를 입력하면 양방향으로 매핑
-- 문자를 입력하면 단방향으로 매핑
+- 숫자를 입력하면 양방향(키 <-> 값)으로 매핑
+- 문자를 입력하면 단방향(키 -> 값)으로 매핑
 
 ```js
 enum Frontend {

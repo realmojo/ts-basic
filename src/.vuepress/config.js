@@ -50,12 +50,18 @@ module.exports = {
         {
           title: "타입스크립트",
           collapsable: false,
-          children: ["", "why-typescript"],
+          children: ["", "why-typescript", "transpile-vs-compile"],
         },
         {
-          title: "기본타입",
+          title: "톺아보기",
           collapsable: false,
-          children: ["type-kind", "type-interface"],
+          children: [
+            "kind",
+            "interface",
+            "type-alias",
+            "type-inference",
+            "unions-and-intersections",
+          ],
         },
       ],
     },

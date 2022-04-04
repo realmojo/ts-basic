@@ -1,15 +1,4 @@
-# 타입 & 인터페이스
-
-## 타입
-
-```js
-type Person = {
-  name: string,
-  age: number,
-  gender: string,
-  country: string,
-};
-```
+# 인터페이스
 
 ## 인터페이스
 
