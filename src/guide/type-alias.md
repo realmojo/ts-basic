@@ -10,13 +10,14 @@
 
 - 리터럴이란 값에 값을 명시적 지정하는 것을 의미하며 타입과 상당히 유사합니다. 사전적 의미로는 문자 자체의, 문자 그대로를 뜻 합니다. 즉 소스코드에 직접적으로 표현된 것을 의미하며 데이터 값을 표현하는 방식이라고 말합니다.
 
-```
-123 // number literal
-'string' // string literal
-true, false // boolean literal
-null // null literal
-undefined // undefined literal
-{} // object literal
+```js
+123; // number literal
+("string"); // string literal
+true, false; // boolean literal
+null; // null literal
+undefined; // undefined literal
+{
+} // object literal
 ```
 
 ## 타입을 정의하는 방법

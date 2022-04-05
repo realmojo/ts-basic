@@ -57,10 +57,13 @@ module.exports = {
           collapsable: false,
           children: [
             "kind",
+            "function",
             "interface",
             "type-alias",
             "type-inference",
             "unions-and-intersections",
+            "class",
+            "generic",
           ],
         },
       ],

@@ -5,7 +5,7 @@
 - 숫자 타입을 선언할 때 사용
 
 ```js
-const age: number = 33;
+let age: number = 33;
 ```
 
 ## string
@@ -13,7 +13,7 @@ const age: number = 33;
 - 문자열 타입을 선언할 때 사용
 
 ```js
-const name: string = "Ted";
+let name: string = "Ted";
 ```
 
 ## boolean
@@ -21,7 +21,7 @@ const name: string = "Ted";
 - 불리언(참/거짓) 타입을 선언할 때 사용
 
 ```js
-const isShow: boolean = true;
+let isShow: boolean = true;
 ```
 
 ## array
@@ -29,16 +29,16 @@ const isShow: boolean = true;
 - 배열 타입을 선언할 때 사용
 
 ```js
-const skills1: string[] = ["HTML", "CSS", "Javascript"];
-const skills2: Array<string> = ["Java", "Node.js", "Golang"];
+let skills1: string[] = ["HTML", "CSS", "Javascript"];
+let skills2: Array<string> = ["Java", "Node.js", "Golang"];
 ```
 
 ## object
 
-- 객체 타입을 선언할 떄 사용
+- 객체 타입을 선언할 때 사용
 
 ```js
-const person: object = {
+let person: object = {
   name: "Ted",
   age: 34,
   isAdult: true,
@@ -50,7 +50,7 @@ const person: object = {
 - 배열에서 서로 다른 타입을 선언할 때 사용
 
 ```js
-const arr: [number, string, boolean] = [33, "Ted", true];
+let arr: [number, string, boolean] = [33, "Ted", true];
 ```
 
 ## enum
@@ -94,7 +94,7 @@ console.log(Backend.Node); // node
 - 명시적으로 빈 값을 선언한 객체 자료
 
 ```js
-const damo: null = null;
+let damo: null = null;
 console.log(damo); // null
 ```
 
@@ -103,7 +103,7 @@ console.log(damo); // null
 - 정의되지 않거나 할당되지 않은 변수를 참조할 때 사용
 
 ```js
-const foo: undefined = undefined;
+let foo: undefined = undefined;
 console.log(foo);
 ```
 

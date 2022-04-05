@@ -1,4 +1,4 @@
-# Union, Intersection Type
+# 유니언, 교차 타입
 
 ## Union Type (|)
 
@@ -79,22 +79,17 @@ const getFood = (food: Fruit | Noodle) => {
 ```
 
 `getFood`함수를 호출 시에는 오류가 발생하는데 `color`속성은 Fruit에만 정의되어 있고 `price`속성은 Noddle에만 정의되어 있습니다. 그렇기 때문에 함수를 호출할 때 과일인지 면인지 정확히 모르기 때문에 타입스크립트는 `color`,`price` 속성을 정확하게 추론을 할 수가 없습니다.
-Type Guard(타입 보호)를 이용해서 타입을 보호 해주지 않는 이상 두 인터페이스의 공통적인 속성만 접근을 할 수 있습니다.
+Type Guard(타입 보호)를 이용해서 타입을 보호 해주지 않는 이상 두 인터페이스의 공통적인 속성만 접근을 할 수 있습니다. 타입가드는 타입을 좁혀주는 메커니즘 입니다.
 
 ```js
 const getFood = (food: Fruit | Noodle) => {
   food.name; // OK
-  if (isFruit(food)) {
+  if ("color" in food) {
     food.color; // OK
-  } else if ((food as Noodle).price) {
+  } else if ("price" in food) {
     food.price; // OK
   }
 };
-
-// Type Guard 정의
-const isFruit = (food:  Fruit | Noodle):food is Fruit => {
-    return (food as  Fruit).color !==  undefined;
-}
 ```
 
 ## Intersection Type (&)
