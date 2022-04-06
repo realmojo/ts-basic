@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "typescript basic lecture",
   "main": "index.js",
+  "homepage": "./typescript",
   "authors": {
     "name": "strikers1999",
     "email": "strikers1999@naver.com"
