@@ -35,16 +35,16 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    nav: [
-      {
-        text: '기초강의',
-        link: '/guide/',
-      },
-      {
-        text: '인프런 강의(무료)',
-        link: '/config/',
-      },
-    ],
+    // nav: [
+    //   {
+    //     text: '기초강의',
+    //     link: '/guide/',
+    //   },
+    //   {
+    //     text: '인프런 강의(무료)',
+    //     link: '/config/',
+    //   },
+    // ],
     sidebar: {
       '/guide/': [
         {

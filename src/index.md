@@ -4,5 +4,5 @@ heroImage: https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3
 tagline: 타입스크립트 기초 강의
 actionText: Quick Start →
 actionLink: /guide/
-footer: Made by strikers1999
+footer: Made by realmojo
 ---
