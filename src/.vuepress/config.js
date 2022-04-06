@@ -1,12 +1,12 @@
 const { description } = require("../../package");
 
 module.exports = {
-  base: "/typescript",
+  // base: "/typescript",
 
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: "Typescript Basic",
+  title: "Javascript & Typescript",
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -18,7 +18,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ["meta", { name: "theme-color", content: "#3178c6" }],
+    ["meta", { name: "theme-color", content: "#2ac1bc" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     [
       "meta",
@@ -37,18 +37,115 @@ module.exports = {
     docsDir: "",
     editLinkText: "",
     lastUpdated: false,
-    // nav: [
-    //   {
-    //     text: '기초강의',
-    //     link: '/guide/',
-    //   },
-    //   {
-    //     text: '인프런 강의(무료)',
-    //     link: '/config/',
-    //   },
-    // ],
+    nav: [
+      {
+        text: "자바스크립트",
+        link: "/javascript/",
+      },
+      {
+        text: "타입스크립트",
+        link: "/typescript/",
+      },
+    ],
     sidebar: {
-      "/guide/": [
+      "/javascript/": [
+        {
+          title: "자바스크립트",
+          collapsable: false,
+          children: ["", "why-javascript"],
+        },
+        {
+          title: "기본문법",
+          collapsable: false,
+          children: [
+            "basic-whitespace",
+            "basic-name",
+            "basic-number",
+            "basic-string",
+            "basic-statement",
+            "basic-expression",
+            "basic-function",
+          ],
+        },
+        {
+          title: "객체",
+          collapsable: false,
+          children: [
+            "object-literal",
+            "object-read",
+            "object-update",
+            "object-reference",
+            "object-prototype",
+            "object-reflection",
+            "object-enum",
+            "object-delete",
+            "object-global",
+          ],
+        },
+        {
+          title: "함수",
+          collapsable: false,
+          children: [
+            "function-object",
+            "function-literal",
+            "function-call",
+            "function-args",
+            "function-return",
+            "function-exception",
+            "function-add",
+            "function-recursive",
+            "function-scope",
+            "function-closure",
+            "function-callback",
+            "function-module",
+            "function-cascade",
+            "function-curry",
+            "function-memoization",
+          ],
+        },
+        {
+          title: "상속",
+          collapsable: false,
+          children: [
+            "prototype-pseudo",
+            "prototype-object",
+            "prototype-prototype",
+            "prototype-function",
+            "prototype-class",
+          ],
+        },
+        {
+          title: "배열",
+          collapsable: false,
+          children: [
+            "array-literal",
+            "array-length",
+            "array-delete",
+            "array-enum",
+            "array-object",
+            "array-method",
+            "array-dimension",
+          ],
+        },
+        {
+          title: "정규표현식",
+          collapsable: false,
+          children: ["regex-example", "regex-object", "regex-type"],
+        },
+        {
+          title: "메소드",
+          collapsable: false,
+          children: [
+            "method-array",
+            "method-number",
+            "method-string",
+            "method-function",
+            "method-object",
+            "method-regex",
+          ],
+        },
+      ],
+      "/typescript/": [
         {
           title: "타입스크립트",
           collapsable: false,
