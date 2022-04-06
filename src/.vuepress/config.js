@@ -1,10 +1,10 @@
-const { description } = require("../../package");
+const { description } = require('../../package');
 
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: "Typescript Basic",
+  title: 'Typescript Basic',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -16,11 +16,11 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ["meta", { name: "theme-color", content: "#3178c6" }],
-    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
+    ['meta', { name: 'theme-color', content: '#3178c6' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     [
-      "meta",
-      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
+      'meta',
+      { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
     ],
   ],
 
@@ -30,40 +30,40 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: "",
+    repo: '',
     editLinks: false,
-    docsDir: "",
-    editLinkText: "",
+    docsDir: '',
+    editLinkText: '',
     lastUpdated: false,
     nav: [
       {
-        text: "기초강의",
-        link: "/guide/",
+        text: '기초강의',
+        link: '/guide/',
       },
       {
-        text: "인프런 강의(무료)",
-        link: "/config/",
+        text: '인프런 강의(무료)',
+        link: '/config/',
       },
     ],
     sidebar: {
-      "/guide/": [
+      '/guide/': [
         {
-          title: "타입스크립트",
+          title: '타입스크립트',
           collapsable: false,
-          children: ["", "why-typescript", "transpile-vs-compile"],
+          children: ['', 'why-typescript', 'transpile-vs-compile'],
         },
         {
-          title: "톺아보기",
+          title: '기본개념',
           collapsable: false,
           children: [
-            "kind",
-            "function",
-            "interface",
-            "type-alias",
-            "type-inference",
-            "unions-and-intersections",
-            "class",
-            "generic",
+            'kind',
+            'function',
+            'interface',
+            'type-alias',
+            'type-inference',
+            'unions-and-intersections',
+            'class',
+            'generic',
           ],
         },
       ],
@@ -73,5 +73,5 @@ module.exports = {
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
-  plugins: ["@vuepress/plugin-back-to-top", "@vuepress/plugin-medium-zoom"],
+  plugins: ['@vuepress/plugin-back-to-top', '@vuepress/plugin-medium-zoom'],
 };
