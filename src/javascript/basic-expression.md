@@ -1,6 +1,6 @@
 # 표현식
 
-가장 간단한 표현식은 리터럴 값(문자열, 숫자), 변수, 내장 값들(true, false, null, undefined, NaN, Infinity), new, delete 등이 있습니다. 이외에도 다음과 같은 표현식이 있습니다.
+가장 간단한 표현식은 리터럴 값(문자열, 숫자), 변수, 내장 값들(`true`, `false`, `null`, `undefined`, `NaN`, `Infinity`), new, delete 등이 있습니다. 이외에도 다음과 같은 표현식이 있습니다.
 
 - 이항 연산자
 - 삼항 연산자 ?
