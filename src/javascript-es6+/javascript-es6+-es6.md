@@ -86,17 +86,202 @@ const Damo = new Developer("Damo", "Javascript");
 Damo.show(); // My name is Damo. I am familiar with Javascript
 ```
 
-## Define object
+## Enhanced Object Literals
+
+### Concise Method
+
+객체에서 메소드를 간결하게 작성하는 것을 의미합니다. `function` 키워드를 작성하지 않아도 됩니다.
+
+```js
+// ES5
+var user = {
+  name: "Kim",
+  getName: function () {
+    return this.name;
+  },
+};
+
+// ES6
+let user = {
+  name: "Kim",
+  getName() {
+    return this.name;
+  },
+};
+```
+
+### Shorthand Property
+
+변수를 속성값으로 사용시 속성값을 축약할 수 있습니다.
+
+```js
+// ES5
+var name = "Kim";
+var age = 34;
+var user = {
+  name: name,
+  age: age,
+};
+
+// ES6
+let name = "Kim";
+let age = 34;
+const user = {
+  name,
+  age,
+};
+```
+
+### Computed property
+
+표현식을 이용하여 객체의 키를 동적으로 생성하는 문법입니다. 기존에는 아래와 같은 문법을 적용할 수 없었습니다.
+
+```js
+var name = "Kim";
+var obj = {
+  'my_' + name: "Sam", // Unexpected token '+'
+  `my_${name}`: "Sam", // Unexpected template string
+}
+
+// ES6
+let name = "Kim";
+let obj = {
+  [`my_${name}`]: "Kim",
+};
+console.log(obj); // { my_Kim: 'Kim' }
+
+let funcName = "getName";
+let name = "Kim";
+let obj = {
+  [`my_${name}`]: "Kim Hi",
+  [funcName]() {
+    console.log(this.my_Kim);
+  },
+};
+obj.getName(); // Kim Hi
+```
 
 ## Copy object
 
+객체복사에는 `얕은복사`와 `깊은복사`가 있습니다. ES6에서 깊은복사 방법이 추가 되었습니다. `얕은복사`는 참조에 의한 할당이 되므로 즉 원본과 복사사본이 같은 주소를 가리키고 있어 값이 동일하게 변경 되는 것을 의미 한다. 반면 `깊은복사`는 주소를 복사해서 공유하는 것이 아닌 새로운 객체를 생성하여 복사하는 것이다.
+
+ES6에서 `assign`, `...spread` 복사는 딱 `1 depth` 까지만 깊은복사가 허용된다. `2 depth` 부터는 얕은 복사가 된다.
+
+```js
+// 원본 객체가 1 depth인 경우
+// Object.assign 이용한 복사
+const obj = {
+  a: 1,
+  b: 2,
+};
+const copyObj = Object.assign({}, obj);
+copyObj.a = 200;
+console.log(copyObj.a, obj.a); // 200, 1
+
+// spread 연산자를 이용한 복사
+const obj = {
+  a: 1,
+  b: 2,
+};
+const copyObj = { ...obj };
+copyObj.a = 200;
+console.log(copyObj.a, obj.a); // 200, 1
+
+// 원본 객체가 2 depth인 경우
+// Object.assign 이용한 복사
+const obj = {
+  a: 1,
+  b: {
+    c: 2,
+    d: 3,
+  },
+};
+const copyObj = Object.assign({}, obj);
+copyObj.b.c = 4;
+console.log(copyObj.b.c, obj.b.c); // 4, 4
+
+// Spread 이용한 복사
+const obj = {
+  a: 1,
+  b: {
+    c: 2,
+    d: 3,
+  },
+};
+const copyObj = { ...obj };
+copyObj.b.c = 4;
+console.log(copyObj.b.c, obj.b.c); // 4, 4
+```
+
+깊은 복사를 하고 싶은 경우에는 `JSON.parse()`, `JSON.stringify()` 함수를 이용해서 복사하는 것이 가장 좋다.
+
 ## Default parameters
 
-## for in, for of
+함수의 매개변수를 전달할 때 값이 없을 경우 기본값을 지정할 수 있습니다.
+
+```js
+// ES5
+function add(a, b) {
+  console.log(a + b);
+}
+add(1, 2); // 3
+
+// ES6
+function add(a = 1, b = 2) {
+  console.log(a + b);
+}
+add(3); // 5
+```
+
+## Iterator, for of
 
 ## Generator
 
 ## Destructing Assignment
+
+구조분해할당은 객체와 배열에서 패턴이 일치되게끔 변수를 할당 받을 수 있습니다. 배열의 각 요소를 배열로부터 디스트럭처링 하여 변수에 할당 받는다.
+
+- Array
+
+```js
+// ES5
+var name = ["Kim name", "Sam name", "Damo name"];
+
+var kim = name[0];
+var sam = name[1];
+var damo = name[2];
+
+// ES6
+let [kim, sam, damo] = ["Kim name", "Sam name", "Damo name"];
+```
+
+- Object
+
+```js
+// ES5
+var user = {
+  name: "Kim",
+  age: 34,
+  skill: ["Javascript", "React"],
+};
+console.log(user.name); // Kim
+console.log(user.age); // 34
+console.log(user.skill); // ["Javascript", "React"]
+
+// ES6
+let {
+  name,
+  age,
+  skill: tech, // skill -> tech alias
+} = {
+  name: "Kim",
+  age: 34,
+  skill: ["Javascript", "React"],
+};
+console.log(name); // Kim
+console.log(age); // 34
+console.log(tech); // ["Javascript", "React"]
+```
 
 ## Spread operator
 
@@ -108,7 +293,46 @@ Damo.show(); // My name is Damo. I am familiar with Javascript
 
 ## Template literal
 
+리터럴 표현식은 내장된 표현식을 허용합니다. 템플릿 리터럴은 숫자 1옆에 있는 **``** `backtick` 키워드를 이용하여 작성할 수 있습니다.
+
+```js
+// ES5
+var str1 = "this is \n" + " string";
+var str2 = "my\nname is\nKim";
+var str3 = str1 + ", " + str2;
+
+// ES6
+let str1 = `this is \n string`;
+let str2 = `my
+name is
+Kim`;
+let str3 = `${str1}, ${str2}`;
+```
+
 ## Trailing Commas
+
+새로운 엘리먼트나 매개변수, 속성을 자바스크립트 코드에 추가할 때 사용합니다. 배열, 객체에 주로 사용이 되며 `JSON`에서는 허용되지 않습니다.
+
+```js
+// ES5
+var user = {
+  name: "Kim",
+  age: 34,
+};
+
+// ES6
+let user = {
+  name: "Kim",
+  age: 34,
+};
+```
+
+JSON에서는 오류가 syntaxError를 발생합니다.
+
+```js
+JSON.parse('{"foo" : 1, }'); // Error
+JSON.parse('{"foo" : 1 }'); // OK
+```
 
 ## Variable
 
