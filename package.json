@@ -1,9 +1,8 @@
 {
   "name": "ts-basic",
   "version": "0.0.1",
-  "description": "typescript basic lecture",
+  "description": "Javascript 도서관",
   "main": "index.js",
-  "homepage": "./typescript",
   "authors": {
     "name": "strikers1999",
     "email": "strikers1999@naver.com"
