@@ -24,14 +24,14 @@ module.exports = {
       "meta",
       { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
-    ["link", { rel: "icon", href: "/assets/favicons/favicon.ico" }],
+    ["link", { rel: "icon", href: "/assets/img/favicon.ico" }],
     [
       "link",
       {
         rel: "icon",
         type: "image/png",
         sizes: "57x57",
-        href: "/assets/favicons/apple-icon-57x57.png",
+        href: "/assets/img/apple-icon-57x57.png",
       },
     ],
     [
@@ -40,7 +40,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "60x60",
-        href: "/assets/favicons/apple-icon-60x60.png",
+        href: "/assets/img/apple-icon-60x60.png",
       },
     ],
     [
@@ -49,7 +49,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "72x72",
-        href: "/assets/favicons/apple-icon-72x72.png",
+        href: "/assets/img/apple-icon-72x72.png",
       },
     ],
     [
@@ -58,7 +58,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "76x76",
-        href: "/assets/favicons/apple-icon-76x76.png",
+        href: "/assets/img/apple-icon-76x76.png",
       },
     ],
     [
@@ -67,7 +67,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "114x114",
-        href: "/assets/favicons/apple-icon-114x114.png",
+        href: "/assets/img/apple-icon-114x114.png",
       },
     ],
     [
@@ -76,7 +76,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "120x120",
-        href: "/assets/favicons/apple-icon-120x120.png",
+        href: "/assets/img/apple-icon-120x120.png",
       },
     ],
     [
@@ -85,7 +85,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "144x144",
-        href: "/assets/favicons/apple-icon-144x144.png",
+        href: "/assets/img/apple-icon-144x144.png",
       },
     ],
     [
@@ -94,7 +94,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "152x152",
-        href: "/assets/favicons/apple-icon-152x152.png",
+        href: "/assets/img/apple-icon-152x152.png",
       },
     ],
     [
@@ -103,7 +103,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "180x180",
-        href: "/assets/favicons/apple-icon-180x180.png",
+        href: "/assets/img/apple-icon-180x180.png",
       },
     ],
     [
@@ -112,7 +112,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "192x192",
-        href: "/assets/favicons/android-icon-192x192.png",
+        href: "/assets/img/android-icon-192x192.png",
       },
     ],
     [
@@ -121,7 +121,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
-        href: "/assets/favicons/favicon-16x16.png",
+        href: "/assets/img/favicon-16x16.png",
       },
     ],
     [
@@ -130,7 +130,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        href: "/assets/favicons/favicon-32x32.png",
+        href: "/assets/img/favicon-32x32.png",
       },
     ],
     [
@@ -139,7 +139,7 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "96x96",
-        href: "/assets/favicons/favicon-96x96.png",
+        href: "/assets/img/favicon-96x96.png",
       },
     ],
   ],
@@ -159,6 +159,10 @@ module.exports = {
       {
         text: "자바스크립트",
         link: "/javascript/",
+      },
+      {
+        text: "자바스크립트 ES6+",
+        link: "/javascript-es6+/",
       },
       {
         text: "타입스크립트",
@@ -242,6 +246,22 @@ module.exports = {
             "method-function",
             "method-object",
             "method-regex",
+          ],
+        },
+      ],
+      "/javascript-es6+/": [
+        {
+          title: "자바스크립트 ES6+",
+          collapsable: false,
+          children: [""],
+        },
+        {
+          title: "ES6+ 이후 변화",
+          collapsable: false,
+          children: [
+            "javascript-es6+-es6",
+            "javascript-es6+-es7",
+            "javascript-es6+-es8",
           ],
         },
       ],
