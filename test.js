@@ -1,21 +1,12 @@
-let user = {
-  name: "Kim",
-  age: 34,
-};
+const arr = [1, 2, 3];
 
-let data = 40;
-Object.defineProperty(user, "skill", {
-  enumerable: true,
-  get() {
-    console.log("data get");
-    return data;
-  },
-  set(newValue) {
-    console.log("data set");
-    data = newValue;
-  },
-});
+const iterator = arr[Symbol.iterator](); //Symbol.itrator를 호출합니다.
 
-user.skill = "Javascript";
-console.log(user.skill);
-console.log(user);
+let item = iterator.next();
+do {
+  console.log(item);
+  item = iterator.next();
+  if (item.done === true) {
+    console.log(item);
+  }
+} while (!item.done);

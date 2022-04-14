@@ -12,7 +12,7 @@ ES6 이후의 역사만 간략하게 요약해봤습니다.
 | 7   | 2016.06 | ECMAScript 2016(ES7)  | 제곱연산자 추가, Array.prototype.includes                                              |
 | 8   | 2017.06 | ECMAScript 2017(ES8)  | 함수 표현식의 인자에서 trailing commas 허용, Object values/entries 메소드, async/await |
 | 9   | 2018.06 | ECMAScript 2018(ES9)  | Promise.finally Async iteration, object rest/spread property                           |
-| 10  | 2095.06 | ECMAScript 2019(ES10) | Object.fromEntries, flat, flatMap, Symbol.description, optional catch                  |
+| 10  | 2019.06 | ECMAScript 2019(ES10) | Object.fromEntries, flat, flatMap, Symbol.description, optional catch                  |
 
 ## 소개
 
