@@ -1,12 +1,20 @@
-const arr = [1, 2, 3];
+function getData() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ status: "ok" });
+    }, 1000);
+  });
+}
 
-const iterator = arr[Symbol.iterator](); //Symbol.itrator를 호출합니다.
-
-let item = iterator.next();
-do {
-  console.log(item);
-  item = iterator.next();
-  if (item.done === true) {
-    console.log(item);
+async function getItems() {
+  let temp = [];
+  for (let i = 0; i < 5; i++) {
+    let response = getData();
+    temp.push(response);
   }
-} while (!item.done);
+
+  const d = await Promise.all(temp);
+  console.log(d);
+}
+
+getItems();
